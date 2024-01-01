@@ -5,9 +5,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-bot_token = os.environ["BOT_TOKEN"]
-api_id = int(os.environ["API_ID"])
-api_hash = os.environ["API_HASH"]
+bot_token = "6784231545:AAFqabbwfT8Vb34-pgs6RZZ5V-jgJJMRI28"
+api_id = "1522127"
+api_hash = "1252ffe16baf341bfd7236f92df76b0e"
 plugins = dict(
     root="plugins"
 )
