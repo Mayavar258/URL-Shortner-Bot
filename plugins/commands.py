@@ -4,16 +4,16 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 START_TEXT = """Hello {} 😌
-I am a link shortner telegram bot.
+I am a link shortnerbot running For Anlinks.in.
 
 >> `I can short any type of link`
 
-Made by @FayasNoushad"""
+Made by @Goodnation"""
 
 HELP_TEXT = """**Hey, Follow these steps:**
 
 ➠ Just send a link for shorting.
-➠ I will send the shorted links.
+➠ I will send the shorted link from Anlinks.in.
 
 **Available Commands**
 
@@ -21,18 +21,13 @@ HELP_TEXT = """**Hey, Follow these steps:**
 /help - For more help
 /about - For more about me
 /status - For bot status
-/settings - For bot settings
 /reset - For reset bot settings
 
-Made by @FayasNoushad"""
+Made by @goodnation"""
 
 ABOUT_TEXT = """--**About Me 😎**--
 
 🤖 **Name :** [Link shortner](https://telegram.me/{})
-
-👨‍💻 **Developer :** [GitHub](https://github.com/FayasNoushad) | [Telegram](https://telegram.me/FayasNoushad)
-
-🌐 **Source :** [👉 Click here](https://github.com/FayasNoushad/URL-Shortner-Bot)
 
 📝 **Language :** [Python3](https://python.org)
 
@@ -87,7 +82,7 @@ SETTINGS_BUTTONS = [
 RESET_BUTTONS = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="Yes ✅", callback_data="confirm_reset"),
+            InlineKeyboardButton(text="No ❌", callback_data="cancel_reset"),
             InlineKeyboardButton(text="No ❌", callback_data="cancel_reset")
         ]
     ]
@@ -154,13 +149,6 @@ async def status(bot, update):
         quote=True,
         disable_web_page_preview=True
     )
-
-
-@Client.on_message(filters.private & filters.command(["settings"]))
-async def settings(bot, update):
-    if not await db.is_user_exist(update.from_user.id):
-        await db.add_user(update.from_user.id)
-    await display_settings(bot, update, db)
 
 
 async def display_settings(bot, update, db, cb=False):
