@@ -60,7 +60,7 @@ async def inline_short(bot, update):
 
 async def short(chat_id, link):
     shorten_urls = "**--Shorted URLs--**\n"
-    if ANLINKS_API and await db.allow_domain(chat_id, "gplinks.in"):
+    if ANLINKS_API and await db.allow_domain(chat_id, "anlinks.in"):
         try:
             api_url = "https://anlinks.in/api"
             params = {'api': ANLINKS_API, 'url': link}
