@@ -32,22 +32,7 @@ class Database:
         return {
             "id": id,
             "domains": {
-                "gplinks.in": True,
-                "bit.ly": True,
-                "chilp.it": True,
-                "click.ru": True,
-                "cutt.ly": True,
-                "da.gd": True,
-                "git.io": True,
-                "is.gd": True,
-                "osdb.link": True,
-                "ow.ly": True,
-                "po.st": True,
-                "qps.ru": True,
-                "short.cm": True,
-                "tinyurl.com": True,
-                "0x0.st": True,
-                "ttm.sh": True
+                "anlinks.in: True
             }
         }
         
